@@ -28,13 +28,14 @@ const sectionsData = [
     quis corporis et nam.`
   }
 ]
+const sectionOpen = ref(null)
 </script>
 
 <template>
   <h1>Ici l'exercice des boucles.</h1>
   <section v-for="({ label, texte }, key) of sectionsData" :key="key">
     <pre class="font-mono">key : {{ key }}</pre>
-    <pre class="font-mono">label : {{ label }}</pre>
-    <pre class="font-mono">texte : {{ texte }}</pre>
+    <pre @pointerdown="sectionOpen = key" class="font-mono">label : {{ label }}</pre>
+    <pre v-show="sectionOpen === key" class="font-mono">texte : {{ texte }}</pre>
   </section>
 </template>
