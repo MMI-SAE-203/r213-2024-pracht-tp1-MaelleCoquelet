@@ -16,6 +16,7 @@ const menuIsOpen = ref(false)
       <ul>
         <li>
           <RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink>
+          <RouterLink to="/accordeon" class="text-red-500 underline" active-class="text-blue-600 underline"> Accueil </RouterLink>
         </li>
       </ul>
     </nav>
