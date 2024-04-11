@@ -1,13 +1,14 @@
 <script setup lang="ts">
 //
 import { ref } from 'vue'
+const sectionOpen = ref(1)
 </script>
 
 <template>
   <p>bonjour</p>
   <section>
-    <button class="text-xl">bouton 1</button>
-    <p>
+    <button class="text-xl" @pointerdown="sectionOpen = sectionOpen === 1 ? 0 : 1">bouton 1</button>
+    <p v-show="sectionOpen === 1">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aut temporibus quae delectus
       aliquam alias molestias minima. Itaque, magni corrupti eos quos neque praesentium animi
       dolorem fugit ullam, excepturi aperiam.
