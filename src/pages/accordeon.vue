@@ -15,16 +15,16 @@ const sectionOpen = ref(1)
     </p>
   </section>
   <section>
-    <button class="text-xl">bouton 2</button>
-    <p>
+    <button class="text-xl" @pointerdown="sectionOpen = sectionOpen === 2 ? 0 : 2">bouton 2</button>
+    <p v-show="sectionOpen === 2">
       Magnam adipisci sequi quas architecto. Impedit id ut illum maxime necessitatibus! Incidunt,
       cupiditate. Molestiae culpa id ratione expedita placeat officiis asperiores quam quasi
       doloremque aut. Consectetur aperiam iure numquam laboriosam.
     </p>
   </section>
   <section>
-    <button class="text-xl">bouton 3</button>
-    <p>
+    <button class="text-xl" @pointerdown="sectionOpen = sectionOpen === 3 ? 0 : 3">bouton 3</button>
+    <p v-show="sectionOpen === 3">
       Alias corporis vero aut placeat iste amet dolores reprehenderit provident tempora! Porro, cum.
       Neque laborum accusamus et ut perspiciatis repudiandae aliquam pariatur, ea molestias eligendi
       esse veritatis, asperiores cupiditate enim.
