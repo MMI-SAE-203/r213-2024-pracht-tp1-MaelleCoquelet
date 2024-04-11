@@ -32,7 +32,7 @@ const sectionsData = [
 
 <template>
   <h1>Ici l'exercice des boucles.</h1>
-  <section v-for="({ label, texte }, key) of sectionsData" :v-key="key">
+  <section v-for="({ label, texte }, key) of sectionsData" :key="key">
     <pre class="font-mono">key : {{ key }}</pre>
     <pre class="font-mono">label : {{ label }}</pre>
     <pre class="font-mono">texte : {{ texte }}</pre>
