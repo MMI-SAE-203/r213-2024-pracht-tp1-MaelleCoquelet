@@ -16,32 +16,34 @@ const menuIsOpen = ref(false)
       <ul>
         <li>
           <RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink>
-          <RouterLink to="/accordeon" class="text-red-500 underline" active-class="text-blue-600 underline"> Accordéon </RouterLink>
-          <RouterLink to="/boucles" class="text-red-500 underline" active-class="text-blue-600 underline">Boucles</RouterLink>
+          <RouterLink to="/accordeon" class="text-red-500 underline" active-class="text-blue-600 underline"> Accordéon
+          </RouterLink>
+          <RouterLink to="/boucles" class="text-red-500 underline" active-class="text-blue-600 underline">Boucles
+          </RouterLink>
         </li>
       </ul>
     </nav>
   </header>
-  <button
-    @pointerdown="menuIsOpen = !menuIsOpen"
-    aria-controls="mainNav"
-    aria-expanded="true"
-    class="rounded-full border-2 border-red-600 bg-red-300 px-2"
-  >
+  <button @pointerdown="menuIsOpen = !menuIsOpen" aria-controls="mainNav" aria-expanded="true"
+    class="rounded-sm border-2 border-teal-600 bg-teal-200 px-4 py-2 m-2">
     menu
   </button>
   <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
-  <Transition
-    class="transition-transform duration-700"
-    enter-from-class="-translate-x-full"
-    enter-to-class="translate-x-0"
-    leave-active-class="-translate-x-full"
-  >
-    <nav id="mainNav" v-show="menuIsOpen">
-      <ul>
-        <li><a href="#">item 1</a></li>
-        <li><a href="#">item 2</a></li>
-        <li><a href="#">item 3</a></li>
+  <Transition class="transition-transform duration-1000" enter-from-class="-translate-x-full"
+    enter-to-class="translate-x-0" leave-active-class="-translate-x-full">
+    <nav id="mainNav" v-show="menuIsOpen" class="bg-gray-700 w-1/6 text-teal-100 flex justify-center py-4">
+      <ul class="flex-col justify-center">
+        <li class="py-3 hover:text-indigo-100 active:text-indigo-100">
+          <RouterLink to="/"> Accueil </RouterLink>
+        </li>
+        <li class="py-3 hover:text-indigo-100 active:text-indigo-100">
+          <RouterLink to="/accordeon"> Accordéon
+          </RouterLink>
+        </li>
+        <li class="py-3 hover:text-indigo-100 active:text-indigo-100">
+          <RouterLink to="/boucles">Boucles
+          </RouterLink>
+        </li>
       </ul>
     </nav>
   </Transition>
